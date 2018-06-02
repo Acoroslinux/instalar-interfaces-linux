@@ -5,7 +5,7 @@
 # 20/02/2018 - 02/06/2018
 #
 # Autor: VitorLeSantos <github.com/VitorLeSantos>
-# Fork: Manuel rosa <acorosalinux@gmail.com>
+# Fork: Manuel rosa <acoroslinux@gmail.com>
 #
 # Descrição: Instale XFCE, Lxde, KDE, Cinnamon, Gnome, Mate, Budgie
 #	         em seu sistema com um comando
