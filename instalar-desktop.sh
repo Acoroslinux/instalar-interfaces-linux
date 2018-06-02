@@ -1,11 +1,16 @@
 #!/bin/bash
+# =============================================================================
+# InstaladorDeDesktop.sh
+# Versão: 0.1.4
+# 20/02/2018 - 02/06/2018
 #
 # Autor: VitorLeSantos <github.com/VitorLeSantos>
 # Fork: Manuel rosa <acorosalinux@gmail.com>
-# Descrição: Instale XFCE, Lxde, KDE, Cinnamon, Gnome, Mate, Budgie
-#	     em seu sistema com um comando
 #
-
+# Descrição: Instale XFCE, Lxde, KDE, Cinnamon, Gnome, Mate, Budgie
+#	         em seu sistema com um comando
+#
+# =============================================================================
 function pause(){
     local msg="$@"
     [ -z $msg ] && msg="Pressione [Enter] para continuar..."
@@ -97,7 +102,7 @@ function mateinstall(){
   tilda pluma \
   network-manager-gnome \
 	lightdm lightdm-gtk-greeter lightdm-settings slick-greeter"
-	sudo apt install --no-install-recommends $MATE -y;
+	sudo apt install  $MATE -y;
 
 }
 
@@ -112,14 +117,14 @@ function xfceinstall(){
     gnome-calculator gnome-system-tools lightdm \
     network-manager-gnome system-config-printer \
     lightdm-gtk-greeter lightdm-settings slick-greeter"
-    sudo apt install --no-install-recommends $XFCE -y;
+    sudo apt install $XFCE -y;
 
 }
 
 function budgieinstall(){
     message "\t    Instalando Budgie Desktop\t"
     BUDGIE="budgie-core budgie-desktop nautilus gdm3"
-    sudo apt install --no-install-recommends $BUDGIE -y;
+    sudo apt install $BUDGIE -y;
 }
 
 function cinnamoninstall(){
@@ -127,7 +132,7 @@ message "\t   Instalando Cinnamon Desktop\t"
     CINNAMON="cinnamon-core cinnamon \
       network-manager-gnome \
       lightdm lightdm-gtk-greeter lightdm-settings slick-greeter"
-    sudo apt install --no-install-recommends $CINNAMON -y;
+    sudo apt install $CINNAMON -y;
 }
 
 function plasmainstall(){
@@ -139,7 +144,7 @@ function plasmainstall(){
     kde-config-sddm kde-config-touchpad kde-config-screenlocker \
     kde-runtime kcalc ark cups-bsd cups-client cups-common \
      "
-    sudo apt install --no-install-recommends $PLASMA -y;
+    sudo apt install $PLASMA -y;
 }
 
 function kde-standardinstall(){
@@ -147,13 +152,13 @@ function kde-standardinstall(){
     KDE-STANDARD="kde-standard dolphin sddm \
     dolphin-plugins qtcurve qtcurve-l10n sddm-theme-breeze \
     sddm-theme-debian-breeze "
-    sudo apt install --no-install-recommends $KDE-STANDARD -y;
+    sudo apt install $KDE-STANDARD -y;
 }
 
 function kde-fullinstall(){
     message "\t    Instalando Kde-full\t"
     KDE-FULL="kde-full "
-    sudo apt install --no-install-recommends $KDE-FULL -y;
+    sudo apt install $KDE-FULL -y;
 }
 
 function gnomeinstall(){
@@ -165,14 +170,14 @@ function gnomeinstall(){
     gnome-packagekit-session \
     gnome-packagekit fwupd \
     gnome-tweak-tool ";
-    sudo apt install --no-install-recommends $GNOME -y;
+    sudo apt install $GNOME -y;
 }
 
 function lxqtinstall(){
     message "\t    Instalando LXQT Desktop\t"
     LXQT="lxqt-core lxqt \
     lightdm lightdm-gtk-greeter lightdm-settings slick-greeter "
-    sudo apt install --no-install-recommends $LXQT -y
+    sudo apt install $LXQT -y
 }
 
 function lxdeinstall(){
@@ -182,7 +187,7 @@ function lxdeinstall(){
     xscreensaver xscreensaver-data-extra xscreensaver-gl \
     xscreensaver-gl-extra  gnome-system-tools \
     system-config-printer "
-    sudo apt install --no-install-recommends $LXDE -y
+    sudo apt install $LXDE -y
 }
 
 function openboxinstall(){
@@ -194,6 +199,6 @@ function openboxinstall(){
     xscreensaver xscreensaver-data-extra xscreensaver-gl \
     xscreensaver-gl-extra  gnome-system-tools \
     system-config-printer network-manager-gnome "
-    sudo apt install --no-install-recommends $OPENBOX -y
+    sudo apt install $OPENBOX -y
 }
 menu
