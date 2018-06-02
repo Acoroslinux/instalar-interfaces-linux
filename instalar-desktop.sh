@@ -110,7 +110,7 @@ function xfceinstall(){
     xscreensaver xscreensaver-data-extra xscreensaver-gl \
     xscreensaver-gl-extra menulibre mugshot accountsservice \
     gnome-calculator gnome-system-tools lightdm \
-    network-manager-Gnome system-config-printer \
+    network-manager-gnome system-config-printer \
     lightdm-gtk-greeter lightdm-settings slick-greeter"
     sudo apt install --no-install-recommends $XFCE -y;
 
@@ -137,7 +137,7 @@ function plasmainstall(){
     sddm-theme-debian-breeze systemsettings gtk3-engines-breeze kate \
     kde-config-flash-player kde-config-gtk-style kde-config-screenlocker \
     kde-config-sddm kde-config-touchpad kde-config-screenlocker \
-    kde-runtime kcalk ark cups-bsd cups-client cups-common \
+    kde-runtime kcalc ark cups-bsd cups-client cups-common \
      "
     sudo apt install --no-install-recommends $PLASMA -y;
 }
@@ -193,7 +193,7 @@ function openboxinstall(){
     lightdm-gtk-greeter lightdm-settings slick-greeter \
     xscreensaver xscreensaver-data-extra xscreensaver-gl \
     xscreensaver-gl-extra  gnome-system-tools \
-    system-config-printer "
+    system-config-printer network-manager-gnome "
     sudo apt install --no-install-recommends $OPENBOX -y
 }
 menu
